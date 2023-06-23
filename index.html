@@ -1,0 +1,73 @@
+<!--
+File: index.html
+GUI Assignment: Creating an Interactive Dynamic Table
+Mohammad Elhadidy, UMass Lowell Computer Science, Mohammad_Elhadidy@student.uml.edu
+Description: Created an interactive dynamic table using HTML, Javascript, and CSS. Used inputs
+values for rows and columns and a table is generated according to their input.
+Sources: https://css-tricks.com/a-table-with-both-a-sticky-header-and-a-sticky-first-column/
+https://mdbootstrap.com/docs/b4/jquery/tables/scroll/
+Copyright (c) 2023 by Mohammad. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by ME on June 21, 2023 at 2:00 PM
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dynamic Multiplication Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<header id="main-header" class="bg-primary text-white p-4 mb-3 text-center"> <!-- Top Header "Multiplication Table Generator" -->
+    <div class="container">
+        <h1 id="header-title">Multiplication Table Generator</h1>
+    </div>
+</header>
+<body>
+    <div class="container col-md-6 col-lg-4 form-control-sm"> <!-- Main container dealing with form -->
+        <form id="form">
+            <div class="mb-0">
+              <label for="num1" class="form-label">Minimum Row</label>
+              <input type="number" step="any" class="form-control" id="num1" aria-describedby="row" name="num1">
+            </div>
+            <div class="mb-0">
+              <label for="num2" class="form-label">Maximum Row</label>
+              <input type="number" step="any" class="form-control" id="num2" name="num2">
+            </div>
+            <div class="mb-0">
+                <label for="num3" class="form-label">Minimum Column</label>
+                <input type="number" step="any" class="form-control" id="num3" aria-describedby="column" name="num3">
+              </div>
+              <div class="mb-2">
+                <label for="num4" class="form-label">Maximum Column</label>
+                <input type="number" step="any" class="form-control" id="num4" name="num4">
+              </div>
+              <div class="msg"></div>
+            <!--<button type="submit" class="btn btn-primary">Generate Table</button>-->
+        </form>
+    </div>
+
+    <div class="container col-md-6 col-lg-4 form-control-sm">
+      <button id="add-tab" class="btn btn-primary">Add Tab</button>
+      <button id="delete-selected" class="btn btn-danger">Delete Multiple Selected</button>
+    </div>
+
+    <div class="scroll-y scrollbar" id="tabs"> <!-- Where table is dynamically generated -->
+      <ul>
+        <li><a href="#tabs-1">Tab 1</a></li>
+      </ul>
+      <div id="tabs-1">  
+        <table id="mtable-1">
+        </table>
+      </div>
+    </div>
+
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+/*
+File: style.css
+GUI Assignment: Creating an Interactive Dynamic Table
+Mohammad Elhadidy, UMass Lowell Computer Science, Mohammad_Elhadidy@student.uml.edu
+Description: Created an interactive dynamic table using HTML, Javascript, and CSS. Used inputs
+values for rows and columns and a table is generated according to their input.
+Sources: https://css-tricks.com/a-table-with-both-a-sticky-header-and-a-sticky-first-column/
+https://mdbootstrap.com/docs/b4/jquery/tables/scroll/
+Copyright (c) 2023 by Mohammad. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by ME on June 21, 2023 at 2:00 PM
+*/
+.scrollbar { /* Used to make container scrollable */ /* Reference used: https://mdbootstrap.com/docs/b4/jquery/tables/scroll/ */
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    height: 300px;
+    overflow: auto;
+    margin-top: 50px;
+    border: 1px solid blue;
+    }
+
+.scroll-y { /* Used to make container scrollable */
+    display: block;
+}
+
+.error { /* Styles error messages when user inputs are not valid */
+    background: orangered;
+    color: #ffffff;
+    padding: 5px;
+    margin:5px;
+}
+
+
+table { /* Styles the dynamically generated table */ /* https://css-tricks.com/a-table-with-both-a-sticky-header-and-a-sticky-first-column/ */
+    font-family: "Fraunces", serif;
+    font-size: 125%;
+    white-space: nowrap;
+    margin: 0;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+  
+table td, table th { /* Styles the dynamically generated table */
+    border: 1px solid black;
+    padding: 0.25rem .5rem;
+}
+
+table td { /* Styles the dynamically generated table */
+    background: #fff;
+    padding: 4px 5px;
+    text-align: center;
+}
